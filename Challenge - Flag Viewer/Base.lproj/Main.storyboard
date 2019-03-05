@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,6 +47,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6d-xK-AeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="119"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0VN-rs-dL3">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="mPG-np-aQt" customClass="DetailViewController" customModule="Challenge___Flag_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qdi-tp-LFD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uza-WN-cRm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uza-WN-cRm" firstAttribute="leading" secondItem="Qdi-tp-LFD" secondAttribute="leading" id="BdM-OA-evh"/>
+                            <constraint firstAttribute="trailing" secondItem="uza-WN-cRm" secondAttribute="trailing" id="cuO-Qd-aG5"/>
+                            <constraint firstItem="uza-WN-cRm" firstAttribute="top" secondItem="Qdi-tp-LFD" secondAttribute="top" id="gWh-BU-ChI"/>
+                            <constraint firstItem="uza-WN-cRm" firstAttribute="bottom" secondItem="8Ax-dI-J5B" secondAttribute="bottom" id="nCn-Fd-4GR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Ax-dI-J5B"/>
+                    </view>
+                    <connections>
+                        <outlet property="flagImage" destination="uza-WN-cRm" id="2sF-E3-lQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sv-t2-p7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880.8" y="119.1904047976012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ryh-dl-NcE">

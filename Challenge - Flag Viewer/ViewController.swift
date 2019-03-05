@@ -35,7 +35,14 @@ class ViewController: UITableViewController {
         cell.textLabel?.text = flags[indexPath.row]
         return cell
     }
-
+    // when user selects a row
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            // set the image to the picture of the selected row
+            vc.selectedFlag = flags[indexPath.row]
+            // show the new view
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+        
 }
-
-// Name of cell: Flag
